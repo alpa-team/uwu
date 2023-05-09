@@ -26,7 +26,4 @@ jobs:
           cache: "pip"
 
       - run: pip install toml
-
-      - env:
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: python ./.github/workflows/bump_version_and_make_tag.py
+      - run: python ./.github/workflows/bump_version_and_make_tag.py
