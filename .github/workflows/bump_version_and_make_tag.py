@@ -12,9 +12,9 @@ with open("pyproject.toml", "w") as f:
     toml.dump(pyproject, f)
 
 
-subprocess.run(["git", "config", "--global", "user.name", "github-actions"])
+subprocess.run(["git", "config", "--global", "user.name", "alpa-bot"])
 subprocess.run(
-    ["git", "config", "--global", "user.email", "github-actions@github.com"]
+    ["git", "config", "--global", "user.email", "alpa.dev.team@gmail.com"]
 )
 subprocess.run(["git", "add", "pyproject.toml"])
 subprocess.run(
