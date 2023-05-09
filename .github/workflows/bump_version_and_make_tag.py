@@ -2,13 +2,13 @@ import subprocess
 
 import toml
 
-pyproject = toml.load("../../pyproject.toml")
+pyproject = toml.load("pyproject.toml")
 version = pyproject["tool"]["poetry"]["version"]
 minor = int(version.split(".")[1])
 new_version = f"0.{minor + 1}.0"
 pyproject["tool"]["poetry"]["version"] = new_version
 
-with open("../../pyproject.toml", "w") as f:
+with open("pyproject.toml", "w") as f:
     toml.dump(pyproject, f)
 
 
