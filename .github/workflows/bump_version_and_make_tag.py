@@ -12,10 +12,14 @@ with open("pyproject.toml", "w") as f:
     toml.dump(pyproject, f)
 
 
+subprocess.run(["git", "config", "--global", "user.name", "github-actions"])
+subprocess.run(
+    ["git", "config", "--global", "user.email", "github-actions@github.com"]
+)
 subprocess.run(["git", "add", "pyproject.toml"])
 subprocess.run(
-    ["git", "commit", "-m", f"release of package uwu to version {version}"]
+    ["git", "commit", "-m", f"release of package uwu to version {new_version}"]
 )
 subprocess.run(["git", "push", "origin", "main"])
-subprocess.run(["git", "tag", version])
+subprocess.run(["git", "tag", new_version])
 subprocess.run(["git", "push", "origin", "--tags"])
