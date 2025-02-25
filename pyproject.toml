@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "uwu"
-version = "0.664.0"
+version = "0.665.0"
 description = "Make your terminal more uwu"
 authors = [ "Jiri Kyjovsky <j1.kyjovsky@gmail.com>",]
 maintainers = [ "Jiří Kyjovský <j1.kyjovsky@gmail.com>",]
